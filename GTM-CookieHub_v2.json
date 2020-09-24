@@ -1,0 +1,760 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2020-09-24 14:44:55",
+    "containerVersion": {
+        "path": "accounts/6000198478/containers/30211184/versions/4",
+        "accountId": "6000198478",
+        "containerId": "30211184",
+        "containerVersionId": "4",
+        "name": "Updated triggers",
+        "container": {
+            "path": "accounts/6000198478/containers/30211184",
+            "accountId": "6000198478",
+            "containerId": "30211184",
+            "name": "CookieHub GTM Recipe",
+            "publicId": "GTM-TWTML8T",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1575544476408",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000198478/containers/30211184/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "tagId": "8",
+                "name": "CookieHub",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script type=\"text/javascript\">\nvar cpm = {};\n(function(h,u,b){\nvar d=h.getElementsByTagName(\"script\")[0],e=h.createElement(\"script\");\ne.async=true;e.src='https://cookiehub.net/c2/xxxxxxxx.js';\ne.onload=function(){u.cookiehub.load(b);}\nd.parentNode.insertBefore(e,d);\n})(document,window,cpm);\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "true"
+                    }
+                ],
+                "fingerprint": "1575554321710",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "parentFolderId": "23",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "tagId": "21",
+                "name": "Sample Tag with Exception",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nconsole.log('Sample tag with exception loaded');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1600958533326",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "blockingTriggerId": [
+                    "17"
+                ],
+                "parentFolderId": "23",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "tagId": "22",
+                "name": "Sample Tag",
+                "type": "html",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "html",
+                        "value": "<script>\nconsole.log('Sample tag loaded');\n</script>"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "supportDocumentWrite",
+                        "value": "false"
+                    }
+                ],
+                "fingerprint": "1575554855951",
+                "firingTriggerId": [
+                    "6"
+                ],
+                "parentFolderId": "23",
+                "tagFiringOption": "ONCE_PER_EVENT",
+                "monitoringMetadata": {
+                    "type": "MAP"
+                }
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "3",
+                "name": "CookieHub - Allowed Necessary",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_necessary_allowed"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958389936",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "4",
+                "name": "CookieHub - Allowed Preferences",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_preferences_allowed"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958413159",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "5",
+                "name": "CookieHub - Allowed Analytics",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_analytics_allowed"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958287639",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "6",
+                "name": "CookieHub - Allowed Marketing",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_marketing_allowed"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958315241",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "7",
+                "name": "CookieHub - Allowed Uncategorized",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_uncategorized_allowed"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958465452",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "9",
+                "name": "CookieHub - Loaded",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_ready"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1575554321696",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "10",
+                "name": "CookieHub - Choice Modified",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_modified"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1575554321697",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "16",
+                "name": "CookieHub - Denied Necessary",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_necessary_denied"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958403176",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "17",
+                "name": "CookieHub - Denied Analytics",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_analytics_denied"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958306928",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "18",
+                "name": "CookieHub - Denied Preferences",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_preferences_denied"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958433078",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "19",
+                "name": "CookieHub - Denied Marketing",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_marketing_denied"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958326226",
+                "parentFolderId": "23"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "triggerId": "20",
+                "name": "CookieHub - Denied Uncategorized",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "MATCH_REGEX",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": ".*"
+                            }
+                        ]
+                    }
+                ],
+                "filter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{Event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "cookiehub_uncategorized_denied"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1600958455945",
+                "parentFolderId": "23"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "variableId": "11",
+                "name": "CookieHub - Variable Analytics Allowed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"analytics\");\n  }\n  return false;\n}"
+                    }
+                ],
+                "fingerprint": "1575554321701",
+                "parentFolderId": "23",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "variableId": "12",
+                "name": "CookieHub - Variable Necessary Allowed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"necessary\");\n  }\n  return false;\n}"
+                    }
+                ],
+                "fingerprint": "1575554321701",
+                "parentFolderId": "23",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "variableId": "13",
+                "name": "CookieHub - Variable Preferences Allowed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"preferences\");\n  }\n  return false;\n}"
+                    }
+                ],
+                "fingerprint": "1575554321702",
+                "parentFolderId": "23",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "variableId": "14",
+                "name": "CookieHub - Variable Marketing Allowed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"marketing\");\n  }\n  return false;\n}"
+                    }
+                ],
+                "fingerprint": "1575554321703",
+                "parentFolderId": "23",
+                "formatValue": {}
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "variableId": "15",
+                "name": "CookieHub - Variable Uncategorized Allowed",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"uncategorized\");\n  }\n  return false;\n}"
+                    }
+                ],
+                "fingerprint": "1575554321704",
+                "parentFolderId": "23",
+                "formatValue": {}
+            }
+        ],
+        "folder": [
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "folderId": "23",
+                "name": "CookieHub",
+                "fingerprint": "1575554302334"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "6000198478",
+                "containerId": "30211184",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1600958681035",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000198478/containers/30211184/versions/4?apiLink=version"
+    }
+}
