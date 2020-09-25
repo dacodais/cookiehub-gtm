@@ -1,12 +1,11 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2020-09-24 14:44:55",
+    "exportTime": "2020-09-25 12:36:22",
     "containerVersion": {
-        "path": "accounts/6000198478/containers/30211184/versions/4",
+        "path": "accounts/6000198478/containers/30211184/versions/0",
         "accountId": "6000198478",
         "containerId": "30211184",
-        "containerVersionId": "4",
-        "name": "Updated triggers",
+        "containerVersionId": "0",
         "container": {
             "path": "accounts/6000198478/containers/30211184",
             "accountId": "6000198478",
@@ -58,7 +57,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<script>\nconsole.log('Sample tag with exception loaded');\n</script>"
+                        "value": "<script>\nconsole.log('CookieHub sample: Analytics not allowed');\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -66,9 +65,10 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1600958533326",
+                "fingerprint": "1601037330375",
                 "firingTriggerId": [
-                    "2147479553"
+                    "9",
+                    "10"
                 ],
                 "blockingTriggerId": [
                     "17"
@@ -89,7 +89,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "<script>\nconsole.log('Sample tag loaded');\n</script>"
+                        "value": "<script>\nconsole.log('CookieHub sample: Analytics allowed');\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -97,7 +97,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1575554855951",
+                "fingerprint": "1601037339748",
                 "firingTriggerId": [
                     "6"
                 ],
@@ -127,7 +127,7 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": ".*"
+                                "value": "cookiehub_(ready|modified)"
                             }
                         ]
                     }
@@ -139,17 +139,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Necessary Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_necessary_allowed"
+                                "value": "true"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958389936",
+                "fingerprint": "1601037157293",
                 "parentFolderId": "23"
             },
             {
@@ -170,7 +170,7 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": ".*"
+                                "value": "cookiehub_(ready|modified)"
                             }
                         ]
                     }
@@ -182,17 +182,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Preferences Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_preferences_allowed"
+                                "value": "true"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958413159",
+                "fingerprint": "1601037170601",
                 "parentFolderId": "23"
             },
             {
@@ -213,7 +213,7 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": ".*"
+                                "value": "cookiehub_(ready|modified)"
                             }
                         ]
                     }
@@ -225,17 +225,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Analytics Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_analytics_allowed"
+                                "value": "true"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958287639",
+                "fingerprint": "1601037129967",
                 "parentFolderId": "23"
             },
             {
@@ -256,7 +256,7 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": ".*"
+                                "value": "cookiehub_(ready|modified)"
                             }
                         ]
                     }
@@ -268,17 +268,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Marketing Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_marketing_allowed"
+                                "value": "true"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958315241",
+                "fingerprint": "1601037143143",
                 "parentFolderId": "23"
             },
             {
@@ -299,7 +299,7 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": ".*"
+                                "value": "cookiehub_(ready|modified)"
                             }
                         ]
                     }
@@ -311,17 +311,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Uncategorized Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_uncategorized_allowed"
+                                "value": "true"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958465452",
+                "fingerprint": "1601037180623",
                 "parentFolderId": "23"
             },
             {
@@ -332,7 +332,7 @@
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
                     {
-                        "type": "MATCH_REGEX",
+                        "type": "EQUALS",
                         "parameter": [
                             {
                                 "type": "TEMPLATE",
@@ -342,29 +342,12 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": ".*"
-                            }
-                        ]
-                    }
-                ],
-                "filter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{Event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
                                 "value": "cookiehub_ready"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1575554321696",
+                "fingerprint": "1601037091927",
                 "parentFolderId": "23"
             },
             {
@@ -375,7 +358,7 @@
                 "type": "CUSTOM_EVENT",
                 "customEventFilter": [
                     {
-                        "type": "MATCH_REGEX",
+                        "type": "EQUALS",
                         "parameter": [
                             {
                                 "type": "TEMPLATE",
@@ -385,29 +368,12 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": ".*"
-                            }
-                        ]
-                    }
-                ],
-                "filter": [
-                    {
-                        "type": "EQUALS",
-                        "parameter": [
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg0",
-                                "value": "{{Event}}"
-                            },
-                            {
-                                "type": "TEMPLATE",
-                                "key": "arg1",
                                 "value": "cookiehub_modified"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1575554321697",
+                "fingerprint": "1601037103969",
                 "parentFolderId": "23"
             },
             {
@@ -440,17 +406,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Necessary Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_necessary_denied"
+                                "value": "false"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958403176",
+                "fingerprint": "1601037225254",
                 "parentFolderId": "23"
             },
             {
@@ -483,17 +449,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Analytics Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_analytics_denied"
+                                "value": "false"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958306928",
+                "fingerprint": "1601037195268",
                 "parentFolderId": "23"
             },
             {
@@ -526,17 +492,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Preferences Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_preferences_denied"
+                                "value": "false"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958433078",
+                "fingerprint": "1601037239200",
                 "parentFolderId": "23"
             },
             {
@@ -569,17 +535,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Marketing Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_marketing_denied"
+                                "value": "false"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958326226",
+                "fingerprint": "1601037209686",
                 "parentFolderId": "23"
             },
             {
@@ -612,17 +578,17 @@
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg0",
-                                "value": "{{Event}}"
+                                "value": "{{CookieHub - Variable Uncategorized Allowed}}"
                             },
                             {
                                 "type": "TEMPLATE",
                                 "key": "arg1",
-                                "value": "cookiehub_uncategorized_denied"
+                                "value": "false"
                             }
                         ]
                     }
                 ],
-                "fingerprint": "1600958455945",
+                "fingerprint": "1601037250264",
                 "parentFolderId": "23"
             }
         ],
@@ -632,15 +598,30 @@
                 "containerId": "30211184",
                 "variableId": "11",
                 "name": "CookieHub - Variable Analytics Allowed",
-                "type": "jsm",
+                "type": "v",
                 "parameter": [
                     {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
                         "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"analytics\");\n  }\n  return false;\n}"
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cookiehub_analytics"
                     }
                 ],
-                "fingerprint": "1575554321701",
+                "fingerprint": "1601037007256",
                 "parentFolderId": "23",
                 "formatValue": {}
             },
@@ -649,15 +630,30 @@
                 "containerId": "30211184",
                 "variableId": "12",
                 "name": "CookieHub - Variable Necessary Allowed",
-                "type": "jsm",
+                "type": "v",
                 "parameter": [
                     {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
                         "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"necessary\");\n  }\n  return false;\n}"
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cookiehub_necessary"
                     }
                 ],
-                "fingerprint": "1575554321701",
+                "fingerprint": "1601037037660",
                 "parentFolderId": "23",
                 "formatValue": {}
             },
@@ -666,15 +662,30 @@
                 "containerId": "30211184",
                 "variableId": "13",
                 "name": "CookieHub - Variable Preferences Allowed",
-                "type": "jsm",
+                "type": "v",
                 "parameter": [
                     {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
                         "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"preferences\");\n  }\n  return false;\n}"
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cookiehub_preferences"
                     }
                 ],
-                "fingerprint": "1575554321702",
+                "fingerprint": "1601037051702",
                 "parentFolderId": "23",
                 "formatValue": {}
             },
@@ -683,15 +694,30 @@
                 "containerId": "30211184",
                 "variableId": "14",
                 "name": "CookieHub - Variable Marketing Allowed",
-                "type": "jsm",
+                "type": "v",
                 "parameter": [
                     {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
                         "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"marketing\");\n  }\n  return false;\n}"
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cookiehub_marketing"
                     }
                 ],
-                "fingerprint": "1575554321703",
+                "fingerprint": "1601037021724",
                 "parentFolderId": "23",
                 "formatValue": {}
             },
@@ -700,15 +726,30 @@
                 "containerId": "30211184",
                 "variableId": "15",
                 "name": "CookieHub - Variable Uncategorized Allowed",
-                "type": "jsm",
+                "type": "v",
                 "parameter": [
                     {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
                         "type": "TEMPLATE",
-                        "key": "javascript",
-                        "value": "function()\n{\n  if (window.cookiehub != undefined)\n  {\n    return window.cookiehub.hasConsented(\"uncategorized\");\n  }\n  return false;\n}"
+                        "key": "defaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "cookiehub_uncategorized"
                     }
                 ],
-                "fingerprint": "1575554321704",
+                "fingerprint": "1601037069856",
                 "parentFolderId": "23",
                 "formatValue": {}
             }
@@ -754,7 +795,7 @@
                 "name": "Event"
             }
         ],
-        "fingerprint": "1600958681035",
-        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000198478/containers/30211184/versions/4?apiLink=version"
+        "fingerprint": "1601037381996",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6000198478/containers/30211184/versions/0?apiLink=version"
     }
 }
